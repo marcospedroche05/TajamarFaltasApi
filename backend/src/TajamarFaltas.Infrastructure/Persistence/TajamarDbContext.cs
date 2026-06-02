@@ -20,6 +20,8 @@ public sealed class TajamarDbContext : DbContext
 
     public DbSet<Falta> Faltas => Set<Falta>();
 
+    public DbSet<UsuarioCurso> UsuariosCursos => Set<UsuarioCurso>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -41,6 +43,7 @@ public sealed class TajamarDbContext : DbContext
             entity.Property(x => x.Apellidos).HasMaxLength(150).IsRequired();
             entity.Property(x => x.Email).HasMaxLength(254).IsRequired();
             entity.Property(x => x.Imagen).HasMaxLength(500);
+            entity.Property(x => x.Password).HasMaxLength(100).IsRequired();
             entity.Property(x => x.IdRole).HasConversion<byte>();
             entity.HasIndex(x => x.Email).IsUnique();
             entity.HasOne(x => x.Role)
@@ -55,6 +58,20 @@ public sealed class TajamarDbContext : DbContext
             entity.HasKey(x => x.IdCurso);
             entity.Property(x => x.Nombre).HasMaxLength(150).IsRequired();
             entity.Property(x => x.DuracionHoras).IsRequired();
+        });
+
+        modelBuilder.Entity<UsuarioCurso>(entity =>
+        {
+            entity.ToTable("UsuariosCursos");
+            entity.HasKey(x => new { x.IdUsuario, x.IdCurso });
+            entity.HasOne(x => x.Usuario)
+                .WithMany(x => x.UsuariosCursos)
+                .HasForeignKey(x => x.IdUsuario)
+                .OnDelete(DeleteBehavior.Restrict);
+            entity.HasOne(x => x.Curso)
+                .WithMany(x => x.UsuariosCursos)
+                .HasForeignKey(x => x.IdCurso)
+                .OnDelete(DeleteBehavior.Restrict);
         });
 
         modelBuilder.Entity<Falta>(entity =>

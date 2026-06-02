@@ -25,13 +25,15 @@ public sealed class ProfesorFaltasService : IProfesorFaltasService
             return null;
         }
 
-        return await _db.Faltas
+        var faltas = await _db.Faltas
             .AsNoTracking()
-            .Where(falta => falta.IdCurso == idCurso)
-            .OrderByDescending(falta => falta.FechaIncidencia)
-            .ThenByDescending(falta => falta.Id)
-            .Select(falta => falta.ToProfesorFaltaDto())
+            .Include(f => f.Usuario)
+            .Where(f => f.IdCurso == idCurso)
+            .OrderByDescending(f => f.FechaIncidencia)
+            .ThenByDescending(f => f.Id)
             .ToListAsync(cancellationToken);
+
+        return faltas.Select(f => f.ToProfesorFaltaDto()).ToList();
     }
 
     public async Task<ProfesorFaltaDto?> CrearFaltaAsync(int profesorId, ProfesorFaltaRequest request, CancellationToken cancellationToken = default)
@@ -82,20 +84,78 @@ public sealed class ProfesorFaltasService : IProfesorFaltasService
         return falta.ToProfesorFaltaDto();
     }
 
-    private async Task<bool> CanProfesorAccessCursoAsync(int profesorId, int idCurso, CancellationToken cancellationToken)
+    public async Task<IReadOnlyList<ProfesorCursoDto>> GetMisCursosAsync(int profesorId, CancellationToken cancellationToken = default)
     {
-        var profesor = await _db.UsuariosMirror
+        return await _db.UsuariosCursos
             .AsNoTracking()
-            .FirstOrDefaultAsync(usuario => usuario.Id == profesorId, cancellationToken);
+            .Where(uc => uc.IdUsuario == profesorId
+                && uc.Usuario!.IdRole == RoleType.Profesor
+                && uc.Usuario.EstadoUsuario
+                && uc.Curso!.Activo)
+            .Select(uc => new ProfesorCursoDto
+            {
+                IdCurso = uc.Curso!.IdCurso,
+                Nombre = uc.Curso.Nombre,
+                DuracionHoras = uc.Curso.DuracionHoras
+            })
+            .ToListAsync(cancellationToken);
+    }
 
-        if (profesor is null || profesor.IdRole != RoleType.Profesor || !profesor.EstadoUsuario)
+    public async Task<IReadOnlyList<ProfesorAlumnoDto>?> GetAlumnosDeCursoAsync(int profesorId, int idCurso, CancellationToken cancellationToken = default)
+    {
+        var autorizado = await CanProfesorAccessCursoAsync(profesorId, idCurso, cancellationToken);
+        if (!autorizado)
+        {
+            return null;
+        }
+
+        return await _db.UsuariosCursos
+            .AsNoTracking()
+            .Where(uc => uc.IdCurso == idCurso
+                && uc.Usuario!.IdRole == RoleType.Alumno
+                && uc.Usuario.EstadoUsuario)
+            .Select(uc => new ProfesorAlumnoDto
+            {
+                IdUsuario = uc.Usuario!.Id,
+                Nombre = uc.Usuario.Nombre,
+                Apellidos = uc.Usuario.Apellidos,
+                Email = uc.Usuario.Email
+            })
+            .ToListAsync(cancellationToken);
+    }
+
+    public async Task<bool?> EliminarFaltaAsync(int profesorId, int idFalta, CancellationToken cancellationToken = default)
+    {
+        var falta = await _db.Faltas
+            .FirstOrDefaultAsync(f => f.Id == idFalta, cancellationToken);
+
+        if (falta is null)
         {
             return false;
         }
 
-        return await _db.CursosMirror
+        var autorizado = await CanProfesorAccessCursoAsync(profesorId, falta.IdCurso, cancellationToken);
+        if (!autorizado)
+        {
+            return null;
+        }
+
+        _db.Faltas.Remove(falta);
+        await _db.SaveChangesAsync(cancellationToken);
+
+        return true;
+    }
+
+    private async Task<bool> CanProfesorAccessCursoAsync(int profesorId, int idCurso, CancellationToken cancellationToken)
+    {
+        return await _db.UsuariosCursos
             .AsNoTracking()
-            .AnyAsync(curso => curso.IdCurso == idCurso && curso.Activo, cancellationToken);
+            .AnyAsync(uc => uc.IdUsuario == profesorId
+                && uc.IdCurso == idCurso
+                && uc.Usuario!.IdRole == RoleType.Profesor
+                && uc.Usuario.EstadoUsuario
+                && uc.Curso!.Activo,
+                cancellationToken);
     }
 
     private static bool TryMapTipoFalta(string value, out TipoFalta tipoFalta)
@@ -106,7 +166,7 @@ public sealed class ProfesorFaltasService : IProfesorFaltasService
         {
             "falta" => Set(out tipoFalta, TipoFalta.Falta),
             "retraso" => Set(out tipoFalta, TipoFalta.Retraso),
-            "salidadedeantes" => Set(out tipoFalta, TipoFalta.SalidaDeAntes),
+            "salidadeantes" => Set(out tipoFalta, TipoFalta.SalidaDeAntes),
             "salida de antes" => Set(out tipoFalta, TipoFalta.SalidaDeAntes),
             _ => false
         };

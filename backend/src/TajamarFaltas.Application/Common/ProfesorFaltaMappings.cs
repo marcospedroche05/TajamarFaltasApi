@@ -5,6 +5,27 @@ namespace TajamarFaltas.Application.Common;
 
 public static class ProfesorFaltaMappings
 {
+    public static ProfesorCursoDto ToProfesorCursoDto(this CursoMirror curso)
+    {
+        return new ProfesorCursoDto
+        {
+            IdCurso = curso.IdCurso,
+            Nombre = curso.Nombre,
+            DuracionHoras = curso.DuracionHoras
+        };
+    }
+
+    public static ProfesorAlumnoDto ToProfesorAlumnoDto(this UsuarioMirror usuario)
+    {
+        return new ProfesorAlumnoDto
+        {
+            IdUsuario = usuario.Id,
+            Nombre = usuario.Nombre,
+            Apellidos = usuario.Apellidos,
+            Email = usuario.Email
+        };
+    }
+
     public static ProfesorFaltaDto ToProfesorFaltaDto(this Falta falta)
     {
         return new ProfesorFaltaDto
@@ -21,7 +42,9 @@ public static class ProfesorFaltaMappings
                 _ => "Falta"
             },
             EsJustificada = falta.EsJustificada,
-            Comentario = falta.Comentario
+            Comentario = falta.Comentario,
+            NombreAlumno = falta.Usuario?.Nombre ?? string.Empty,
+            ApellidosAlumno = falta.Usuario?.Apellidos ?? string.Empty
         };
     }
 }

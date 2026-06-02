@@ -15,3 +15,4 @@ C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\refint\TajamarFaltas.Infrastructure.dll
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\TajamarFaltas.Infrastructure.pdb
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\ref\TajamarFaltas.Infrastructure.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\TajamarFaltas.Infrastructure.sourcelink.json

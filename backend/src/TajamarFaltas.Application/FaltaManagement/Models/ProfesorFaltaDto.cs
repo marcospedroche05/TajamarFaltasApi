@@ -15,4 +15,8 @@ public sealed class ProfesorFaltaDto
     public bool EsJustificada { get; set; }
 
     public string? Comentario { get; set; }
+
+    public string NombreAlumno { get; set; } = string.Empty;
+
+    public string ApellidosAlumno { get; set; } = string.Empty;
 }

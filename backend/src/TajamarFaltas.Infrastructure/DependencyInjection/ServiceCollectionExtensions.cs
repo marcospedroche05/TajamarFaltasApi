@@ -2,11 +2,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TajamarFaltas.Application.FaltaManagement;
+using TajamarFaltas.Application.Usuarios;
 using TajamarFaltas.Domain.Interfaces;
 using TajamarFaltas.Infrastructure.ExternalServices;
 using TajamarFaltas.Infrastructure.FaltaManagement;
 using TajamarFaltas.Infrastructure.Options;
 using TajamarFaltas.Infrastructure.Persistence;
+using TajamarFaltas.Infrastructure.Usuarios;
 
 namespace TajamarFaltas.Infrastructure;
 
@@ -34,6 +36,8 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IMisFaltasQueryService, MisFaltasQueryService>();
         services.AddScoped<IProfesorFaltasService, ProfesorFaltasService>();
         services.AddScoped<TajamarFaltas.Application.FaltaManagement.IAdminFaltasService, AdminFaltasService>();
+        services.AddScoped<TajamarFaltas.Application.FaltaManagement.IAdminCursosService, AdminCursosService>();
+        services.AddScoped<IUsuariosQueryService, UsuariosQueryService>();
 
         return services;
     }

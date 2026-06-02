@@ -156,3 +156,4 @@ C:\Users\marco\Desktop\TajamarFaltasApi\backend\tests\TajamarFaltas.Api.Integrat
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\tests\TajamarFaltas.Api.IntegrationTests\obj\Debug\net8.0\TajamarFaltas.Api.IntegrationTests.pdb
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\tests\TajamarFaltas.Api.IntegrationTests\obj\Debug\net8.0\TajamarFaltas.Api.IntegrationTests.genruntimeconfig.cache
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\tests\TajamarFaltas.Api.IntegrationTests\obj\Debug\net8.0\ref\TajamarFaltas.Api.IntegrationTests.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\tests\TajamarFaltas.Api.IntegrationTests\obj\Debug\net8.0\TajamarFaltas.Api.IntegrationTests.sourcelink.json

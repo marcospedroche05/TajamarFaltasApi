@@ -13,3 +13,4 @@ C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\ob
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\refint\TajamarFaltas.Application.dll
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\TajamarFaltas.Application.pdb
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\ref\TajamarFaltas.Application.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\TajamarFaltas.Application.sourcelink.json

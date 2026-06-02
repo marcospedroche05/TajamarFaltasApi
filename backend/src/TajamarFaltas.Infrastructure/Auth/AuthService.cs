@@ -32,6 +32,11 @@ public sealed class AuthService : IAuthService
             return null;
         }
 
+        if (usuario.Password != request.Password)
+        {
+            return null;
+        }
+
         var (token, expiresIn) = await _tokenService.GenerateTokenAsync(usuario, cancellationToken);
 
         return new LoginResponse

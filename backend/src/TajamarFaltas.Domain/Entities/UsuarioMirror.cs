@@ -16,9 +16,13 @@ public sealed class UsuarioMirror
 
     public string? Imagen { get; set; }
 
+    public string Password { get; set; } = string.Empty;
+
     public RoleType IdRole { get; set; }
 
     public RoleMirror? Role { get; set; }
 
     public ICollection<Falta> Faltas { get; set; } = new List<Falta>();
+
+    public ICollection<UsuarioCurso> UsuariosCursos { get; set; } = new List<UsuarioCurso>();
 }

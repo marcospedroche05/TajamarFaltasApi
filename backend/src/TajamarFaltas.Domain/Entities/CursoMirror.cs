@@ -11,4 +11,6 @@ public sealed class CursoMirror
     public bool Activo { get; set; }
 
     public ICollection<Falta> Faltas { get; set; } = new List<Falta>();
+
+    public ICollection<UsuarioCurso> UsuariosCursos { get; set; } = new List<UsuarioCurso>();
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TajamarFaltas.Api.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eba16ed79b3c8937193b6d577dc013faa69043fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5914ab24a30a3925036d80e43bf401fa3d97c99b")]
 [assembly: System.Reflection.AssemblyProductAttribute("TajamarFaltas.Api.IntegrationTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TajamarFaltas.Api.IntegrationTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

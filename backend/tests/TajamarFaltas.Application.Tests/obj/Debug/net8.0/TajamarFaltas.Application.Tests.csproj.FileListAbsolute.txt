@@ -103,3 +103,4 @@ C:\Users\marco\Desktop\TajamarFaltasApi\backend\tests\TajamarFaltas.Application.
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\tests\TajamarFaltas.Application.Tests\obj\Debug\net8.0\TajamarFaltas.Application.Tests.pdb
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\tests\TajamarFaltas.Application.Tests\obj\Debug\net8.0\TajamarFaltas.Application.Tests.genruntimeconfig.cache
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\tests\TajamarFaltas.Application.Tests\obj\Debug\net8.0\ref\TajamarFaltas.Application.Tests.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\tests\TajamarFaltas.Application.Tests\obj\Debug\net8.0\TajamarFaltas.Application.Tests.sourcelink.json

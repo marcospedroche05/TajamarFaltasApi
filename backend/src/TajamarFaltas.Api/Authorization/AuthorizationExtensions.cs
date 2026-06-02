@@ -11,6 +11,8 @@ public static class AuthorizationExtensions
             options.AddPolicy(PolicyNames.AlumnoOnly, policy => policy.RequireRole("Alumno"));
             options.AddPolicy(PolicyNames.ProfesorOnly, policy => policy.RequireRole("Profesor"));
             options.AddPolicy(PolicyNames.AdministradorOnly, policy => policy.RequireRole("Administrador"));
+            options.AddPolicy(PolicyNames.ProfesorOrAdministrador, policy =>
+                policy.RequireRole("Profesor", "Administrador"));
         });
 
         return services;

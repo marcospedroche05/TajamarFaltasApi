@@ -53,6 +53,53 @@ public class ProfesorFaltasController : ControllerBase
         return CreatedAtAction(nameof(GetFaltasPorCurso), new { idCurso = faltaCreada.IdCurso }, faltaCreada);
     }
 
+    [HttpGet("cursos")]
+    public async Task<ActionResult<IReadOnlyList<ProfesorCursoDto>>> GetMisCursos(CancellationToken cancellationToken)
+    {
+        if (!TryGetUsuarioId(out var profesorId))
+        {
+            return Unauthorized();
+        }
+
+        var cursos = await _profesorFaltasService.GetMisCursosAsync(profesorId, cancellationToken);
+        return Ok(cursos);
+    }
+
+    [HttpGet("cursos/{idCurso:int}/alumnos")]
+    public async Task<ActionResult<IReadOnlyList<ProfesorAlumnoDto>>> GetAlumnosDeCurso([FromRoute] int idCurso, CancellationToken cancellationToken)
+    {
+        if (!TryGetUsuarioId(out var profesorId))
+        {
+            return Unauthorized();
+        }
+
+        var alumnos = await _profesorFaltasService.GetAlumnosDeCursoAsync(profesorId, idCurso, cancellationToken);
+        if (alumnos is null)
+        {
+            return Forbid();
+        }
+
+        return Ok(alumnos);
+    }
+
+    [HttpDelete("faltas/{id:int}")]
+    public async Task<IActionResult> EliminarFalta([FromRoute] int id, CancellationToken cancellationToken)
+    {
+        if (!TryGetUsuarioId(out var profesorId))
+        {
+            return Unauthorized();
+        }
+
+        var resultado = await _profesorFaltasService.EliminarFaltaAsync(profesorId, id, cancellationToken);
+
+        return resultado switch
+        {
+            null => Forbid(),
+            false => NotFound(),
+            true => NoContent()
+        };
+    }
+
     private bool TryGetUsuarioId(out int usuarioId)
     {
         usuarioId = 0;

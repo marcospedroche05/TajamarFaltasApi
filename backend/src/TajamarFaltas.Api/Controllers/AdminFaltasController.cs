@@ -1,3 +1,4 @@
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -20,16 +21,24 @@ namespace TajamarFaltas.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
         {
-            var items = await _service.GetAllFaltasAsync();
+            var items = await _service.GetAllFaltasAsync(cancellationToken);
             return Ok(items);
         }
 
         [HttpPatch("{id}/justificacion")]
-        public async Task<IActionResult> UpdateJustificacion(int id, [FromBody] AdminFaltaJustificacionRequest request)
+        public async Task<IActionResult> UpdateJustificacion(int id, [FromBody] AdminFaltaJustificacionRequest request, CancellationToken cancellationToken)
         {
-            var ok = await _service.UpdateJustificacionAsync(id, request.EsJustificada);
+            var ok = await _service.UpdateJustificacionAsync(id, request.EsJustificada, cancellationToken);
+            if (!ok) return NotFound();
+            return NoContent();
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> EliminarFalta(int id, CancellationToken cancellationToken)
+        {
+            var ok = await _service.EliminarFaltaAsync(id, cancellationToken);
             if (!ok) return NotFound();
             return NoContent();
         }

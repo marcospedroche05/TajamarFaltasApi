@@ -79,3 +79,4 @@ C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Api\obj\Debug\
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Api\obj\Debug\net8.0\TajamarFaltas.Api.pdb
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Api\obj\Debug\net8.0\TajamarFaltas.Api.genruntimeconfig.cache
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Api\obj\Debug\net8.0\ref\TajamarFaltas.Api.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Api\obj\Debug\net8.0\TajamarFaltas.Api.sourcelink.json

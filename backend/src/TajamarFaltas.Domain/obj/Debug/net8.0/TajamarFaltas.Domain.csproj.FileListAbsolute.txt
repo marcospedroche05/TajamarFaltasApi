@@ -9,3 +9,4 @@ C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Deb
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Debug\net8.0\refint\TajamarFaltas.Domain.dll
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Debug\net8.0\TajamarFaltas.Domain.pdb
 C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Debug\net8.0\ref\TajamarFaltas.Domain.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Debug\net8.0\TajamarFaltas.Domain.sourcelink.json
