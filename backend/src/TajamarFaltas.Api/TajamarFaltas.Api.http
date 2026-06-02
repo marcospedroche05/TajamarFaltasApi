@@ -1,0 +1,6 @@
+@TajamarFaltas.Api_HostAddress = http://localhost:5209
+
+GET {{TajamarFaltas.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

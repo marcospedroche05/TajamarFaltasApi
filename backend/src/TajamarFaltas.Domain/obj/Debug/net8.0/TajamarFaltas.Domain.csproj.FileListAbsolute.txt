@@ -1,0 +1,11 @@
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\bin\Debug\net8.0\TajamarFaltas.Domain.deps.json
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\bin\Debug\net8.0\TajamarFaltas.Domain.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\bin\Debug\net8.0\TajamarFaltas.Domain.pdb
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Debug\net8.0\TajamarFaltas.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Debug\net8.0\TajamarFaltas.Domain.AssemblyInfoInputs.cache
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Debug\net8.0\TajamarFaltas.Domain.AssemblyInfo.cs
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Debug\net8.0\TajamarFaltas.Domain.csproj.CoreCompileInputs.cache
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Debug\net8.0\TajamarFaltas.Domain.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Debug\net8.0\refint\TajamarFaltas.Domain.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Debug\net8.0\TajamarFaltas.Domain.pdb
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Domain\obj\Debug\net8.0\ref\TajamarFaltas.Domain.dll

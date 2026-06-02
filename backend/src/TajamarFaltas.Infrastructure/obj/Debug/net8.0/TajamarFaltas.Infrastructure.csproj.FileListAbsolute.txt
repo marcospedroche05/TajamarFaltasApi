@@ -1,0 +1,17 @@
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\TajamarFaltas.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\TajamarFaltas.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\TajamarFaltas.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\TajamarFaltas.Infrastructure.AssemblyInfo.cs
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\TajamarFaltas.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\bin\Debug\net8.0\TajamarFaltas.Infrastructure.deps.json
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\bin\Debug\net8.0\TajamarFaltas.Infrastructure.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\bin\Debug\net8.0\TajamarFaltas.Infrastructure.pdb
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\bin\Debug\net8.0\TajamarFaltas.Application.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\bin\Debug\net8.0\TajamarFaltas.Domain.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\bin\Debug\net8.0\TajamarFaltas.Application.pdb
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\bin\Debug\net8.0\TajamarFaltas.Domain.pdb
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\TajamarF.C3C8BB0C.Up2Date
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\TajamarFaltas.Infrastructure.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\refint\TajamarFaltas.Infrastructure.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\TajamarFaltas.Infrastructure.pdb
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Infrastructure\obj\Debug\net8.0\ref\TajamarFaltas.Infrastructure.dll

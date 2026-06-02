@@ -1,0 +1,15 @@
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\TajamarFaltas.Application.csproj.AssemblyReference.cache
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\TajamarFaltas.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\TajamarFaltas.Application.AssemblyInfoInputs.cache
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\TajamarFaltas.Application.AssemblyInfo.cs
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\TajamarFaltas.Application.csproj.CoreCompileInputs.cache
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\bin\Debug\net8.0\TajamarFaltas.Application.deps.json
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\bin\Debug\net8.0\TajamarFaltas.Application.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\bin\Debug\net8.0\TajamarFaltas.Application.pdb
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\bin\Debug\net8.0\TajamarFaltas.Domain.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\bin\Debug\net8.0\TajamarFaltas.Domain.pdb
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\TajamarF.9A3F0789.Up2Date
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\TajamarFaltas.Application.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\refint\TajamarFaltas.Application.dll
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\TajamarFaltas.Application.pdb
+C:\Users\marco\Desktop\TajamarFaltasApi\backend\src\TajamarFaltas.Application\obj\Debug\net8.0\ref\TajamarFaltas.Application.dll
